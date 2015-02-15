@@ -7,12 +7,6 @@ Create subtitles for video using YouTube
 - [IOERROR YT_DEVKEY](#ioerror yt_devkey)
 - [DOWNLOAD THE SCRIPTS AND USE](#download the scripts and use)
 - [DESCRIPTION THIS SCRIPTS](#description this scripts)
-- [OUTPUT TEMPLATE](#output-template)
-- [VIDEO SELECTION](#video-selection)
-- [FAQ](#faq)
-- [DEVELOPER INSTRUCTIONS](#developer-instructions)
-- [BUGS](#bugs)
-- [COPYRIGHT](#copyright)
 
 # DESCRIPTION
 
