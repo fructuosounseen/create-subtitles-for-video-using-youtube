@@ -1,30 +1,56 @@
 # create-subtitles-for-video-using-youtube
 Create subtitles for video using YouTube
 
+- [DESCRIPTION](#description)
+- [INSTALLATION](#installation)
+- [AUTHENTICATE WITH GOOGLE](#authenticate with google)
+- [IOERROR YT_DEVKEY](#ioerror yt_devkey)
+- [OPTIONS](#options)
+- [CONFIGURATION](#configuration)
+- [OUTPUT TEMPLATE](#output-template)
+- [VIDEO SELECTION](#video-selection)
+- [FAQ](#faq)
+- [DEVELOPER INSTRUCTIONS](#developer-instructions)
+- [BUGS](#bugs)
+- [COPYRIGHT](#copyright)
+
+# DESCRIPTION
+
 Small command-line program to upload video on YouTube, download subtitles creating YouTube, prepare text for translate.
 Need install googlecl, youtube-dl.
+
+# INSTALLATION
+
 Googlecl should be higher revision r635.
 At this moment in Ubuntu 14.10 older version, so download from the SVN repository.
 
-1. Install the required packages
-sudo apt-get install youtube-dl git subversion python-gdata
+Install the required packages
 
-2. Install GoogleCL
+    sudo apt-get install youtube-dl git subversion python-gdata
+
+Install GoogleCL
+
     svn checkout http://googlecl.googlecode.com/svn/trunk/ googlecl-read-only
     cd googlecl-read-only
     sudo python setup.py install
 
-3. First, you need to authenticate with google. Try to upload one video
-    google youtube post --category Education --access unlisted видео.mp4
+# AUTHENTICATE WITH GOOGLE
+
+First, you need to authenticate with google. Try to upload one video
+
+    google youtube post --category Education --access unlisted video.mp4
 
 Opens the console window of the browser, you need to enter the login/password from your Google username.
 Then you need to close the window - There will be written, you must copy the link and paste in your browser.
 
-4. If this or a similar error:
+# IOERROR YT_DEVKEY
+
+ If this or a similar error:
 
     IOError: [Errno 2] No such file or directory: '/home/user/.local/share/googlecl/yt_devkey'
 
 Follow:
+
     sudo mkdir -p ~/.local/share/googlecl
 
 5. Download the scripts and use.
@@ -79,27 +105,23 @@ move.good.subtitles.sh
     The cycle passes successively through all the rows in good.subtitles.txt and moves all files with the same name in the folder good.subtitles.
 
 paste.srt.sh
-    After each line of the script adds a row with the same sequence number from another file.
 
-    Suppose there are two files: 1 and 2.
+After each line of the script adds a row with the same sequence number from another file.
+Suppose there are two files: 1 and 2.
+The first file:
+    1st line of the 1st file
+    2nd line of the 1st file
 
-    The first file:
-	1st line of the 1st file
+The Second file:
+    1st line 2nd file
+    2nd line of the 2nd file
 
-	2nd line of the 1st file
+The result:
+    1st line of the 1st file
+    1st line 2nd file
 
-    The Second file:
-	1st line 2nd file
-
-	2nd line of the 2nd file
-
-    The result:
-
-	1st line of the 1st file
-	1st line 2nd file
-
-        2nd line of the 1st file
-        2nd line of the 2nd file
+    2nd line of the 1st file
+    2nd line of the 2nd file
 
 copy.lang.txt.sh
     Copy files lang.txt so you can process them separately, to send to others for review
