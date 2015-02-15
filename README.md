@@ -5,8 +5,8 @@ Create subtitles for video using YouTube
 - [INSTALLATION](#installation)
 - [AUTHENTICATE WITH GOOGLE](#authenticate with google)
 - [IOERROR YT_DEVKEY](#ioerror yt_devkey)
-- [OPTIONS](#options)
-- [CONFIGURATION](#configuration)
+- [DOWNLOAD THE SCRIPTS AND USE](#download the scripts and use)
+- [DESCRIPTION THIS SCRIPTS](#description this scripts)
 - [OUTPUT TEMPLATE](#output-template)
 - [VIDEO SELECTION](#video-selection)
 - [FAQ](#faq)
@@ -53,39 +53,41 @@ Follow:
 
     sudo mkdir -p ~/.local/share/googlecl
 
-5. Download the scripts and use.
+# DOWNLOAD THE SCRIPTS AND USE
     git clone https://github.com/fructuosounseen/create-subtitles-for-video-using-youtube.git
 
-6. In current directory with video start script upload.video.sh
+    In current directory with video start script upload.video.sh
 
-7. At next day in current directory with video start script get.srt.from.youtube.sh
+    At next day in current directory with video start script get.srt.from.youtube.sh
 
-8. Move good subtitles to directory good.subtitles - script move.good.subtitles.sh
+    Move good subtitles to directory good.subtitles - script move.good.subtitles.sh
 
-9. Extract text from subtitles - script get.txt.from.srt.sh
+    Extract text from subtitles - script get.txt.from.srt.sh
     The result is one long string without punctuation. You must place the punctuation marks.
 
-10. Write punctuation in srt files. Text from txt files help you to make punctuation.
+    Write punctuation in srt files. Text from txt files help you to make punctuation.
 
-11. The script will put each sentence on a separate line.
+    The script will put each sentence on a separate line.
 
-12. Translate text to your language. Save the translated text in name.video.you-lang.txt
+    Translate text to your language. Save the translated text in name.video.you-lang.txt
+    
+    Combine both texts in one script - paste.srt.sh
 
-13. Combine both texts in one script - paste.srt.sh
+    As a result, after each English strings will be translated strings.
+    
+    Copy files lang.txt so you can process them separately, to send to others for review - script copy.lang.txt.sh 
+    
+    Check the translation
 
-14. As a result, after each English strings will be translated strings.
-
-15. Copy files lang.txt so you can process them separately, to send to others for review - script copy.lang.txt.sh 
-
-16. Check the translation
-
-Description:
+# DESCRIPTION THIS SCRIPTS
 
 upload.video.sh
+
     The script looks in the current directory with the script files with the extension mp4 and consistently to each file applies the command to upload videos on YouTube.
     Change extension video at scripts. Current extension is mp4.
 
 get.srt.from.youtube.sh
+
     google youtube list - shows a list of videos on your channel.
     google youtube list > info.youtube.txt - redirects the output info.youtube.txt.
     Sleep is inserted, because Youtube is blocking requests are too frequent.
@@ -93,12 +95,14 @@ get.srt.from.youtube.sh
     The script reads info.current.video.txt and sequentially to each row applies the command. Youtube-dl in this command downloads the subtitles.
 
 get.txt.from.srt.sh
+
     A script that looks in the current directory with the script files with the extension srt and consistently to each file uses the command. 
     The team there is a long and includes other commands.
     The main task of this script is reading the subtitles, and reformatted in the form of saving in a simple text file.
     THE RESULT IS ONE LONG STRING WITHOUT PUNCTUATION. YOU MUST PLACE THE PUNCTUATION MARKS. THIS MUST BE DONE IN MANUAL MODE.
 
 move.good.subtitles.sh
+
     The script creates a folder good.subtitles, reads log.download.txt.
     Searches for lines containing the string Writing, forwards the matching string good.video.txt.
     Reads good.video.txt extracts from 6 column, and redirects it to the good.subtitles.txt.
@@ -107,16 +111,20 @@ move.good.subtitles.sh
 paste.srt.sh
 
 After each line of the script adds a row with the same sequence number from another file.
+
 Suppose there are two files: 1 and 2.
 The first file:
+
     1st line of the 1st file
     2nd line of the 1st file
 
 The Second file:
+
     1st line 2nd file
     2nd line of the 2nd file
 
 The result:
+
     1st line of the 1st file
     1st line 2nd file
 
@@ -124,4 +132,5 @@ The result:
     2nd line of the 2nd file
 
 copy.lang.txt.sh
+
     Copy files lang.txt so you can process them separately, to send to others for review
