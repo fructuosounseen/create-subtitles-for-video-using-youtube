@@ -4,9 +4,9 @@ Create subtitles for video using YouTube
 - [DESCRIPTION](#description)
 - [INSTALLATION](#installation)
 - [AUTHENTICATE WITH GOOGLE](#authenticate_with_google)
-- [IOERROR YT_DEVKEY](#ioerror yt_devkey)
-- [DOWNLOAD THE SCRIPTS AND USE](#download the scripts and use)
-- [DESCRIPTION THIS SCRIPTS](#description this scripts)
+- [IOERROR YT_DEVKEY](#ioerror_yt_devkey)
+- [DOWNLOAD THE SCRIPTS AND USE](#download_the_scripts_and_use)
+- [DESCRIPTION THIS SCRIPTS](#description_this_scripts)
 
 # DESCRIPTION
 
@@ -37,7 +37,7 @@ First, you need to authenticate with google. Try to upload one video
 Opens the console window of the browser, you need to enter the login/password from your Google username.
 Then you need to close the window - There will be written, you must copy the link and paste in your browser.
 
-# IOERROR YT_DEVKEY
+# IOERROR_YT_DEVKEY
 
  If this or a similar error:
 
@@ -47,7 +47,7 @@ Follow:
 
     sudo mkdir -p ~/.local/share/googlecl
 
-# DOWNLOAD THE SCRIPTS AND USE
+# DOWNLOAD_THE_SCRIPTS_AND_USE
     git clone https://github.com/fructuosounseen/create-subtitles-for-video-using-youtube.git
 
     In current directory with video start script upload.video.sh
@@ -73,7 +73,7 @@ Follow:
     
     Check the translation
 
-# DESCRIPTION THIS SCRIPTS
+# DESCRIPTION_THIS_SCRIPTS
 
 upload.video.sh
 
