@@ -3,7 +3,7 @@ Create subtitles for video using YouTube
 
 - [DESCRIPTION](#description)
 - [INSTALLATION](#installation)
-- [AUTHENTICATE WITH GOOGLE](#authenticate with google)
+- [AUTHENTICATE_WITH_GOOGLE](#authenticate with google)
 - [IOERROR YT_DEVKEY](#ioerror yt_devkey)
 - [DOWNLOAD THE SCRIPTS AND USE](#download the scripts and use)
 - [DESCRIPTION THIS SCRIPTS](#description this scripts)
