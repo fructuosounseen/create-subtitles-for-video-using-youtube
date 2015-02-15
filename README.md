@@ -3,7 +3,7 @@ Create subtitles for video using YouTube
 
 - [DESCRIPTION](#description)
 - [INSTALLATION](#installation)
-- [AUTHENTICATE_WITH_GOOGLE](#authenticate with google)
+- [AUTHENTICATE WITH GOOGLE](#authenticate_with_google)
 - [IOERROR YT_DEVKEY](#ioerror yt_devkey)
 - [DOWNLOAD THE SCRIPTS AND USE](#download the scripts and use)
 - [DESCRIPTION THIS SCRIPTS](#description this scripts)
@@ -28,7 +28,7 @@ Install GoogleCL
     cd googlecl-read-only
     sudo python setup.py install
 
-# AUTHENTICATE WITH GOOGLE
+# AUTHENTICATE_WITH_GOOGLE
 
 First, you need to authenticate with google. Try to upload one video
 
