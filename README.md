@@ -88,7 +88,7 @@ get.srt.from.youtube.sh
     Next cut divides the text into 2 parts, using the delimiter is a comma, and the second part redirects to a file info.current.video.txt.
     The script reads info.current.video.txt and sequentially to each row applies the command. Youtube-dl in this command downloads the subtitles.
 
-get.txt.from.srt.sh
+get.txt.from.srt.py
 
     A script that looks in the current directory with the script files with the extension srt and consistently to each file uses the command. 
     The team there is a long and includes other commands.
